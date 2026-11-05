@@ -233,10 +233,41 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap">
       <div class="sec-head">
         <h2 class="title">Projects</h2>
-        <p>Three things I built, and what each one does.</p>
+        <p>Four things I built, and what each one does.</p>
       </div>
 
       <article class="card proj">
+        <div class="media">
+          <div class="flow" role="img" aria-label="Flow: a customer message goes to Gemini, which classifies it, and n8n drafts a reply or sends an alert">
+            <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
+              <path class="pipe" d="M210 78 V112"/>
+              <path class="pipe" d="M210 188 V222"/>
+              <rect class="node" x="90" y="22" width="240" height="56" rx="12"/>
+              <rect class="ico" x="106" y="38" width="24" height="24" rx="6"/>
+              <text x="144" y="46">Customer message</text><text class="sub" x="144" y="63">Sent into the workflow</text>
+              <rect class="node" x="90" y="112" width="240" height="76" rx="12"/>
+              <rect class="ico" x="106" y="136" width="24" height="24" rx="12"/>
+              <text x="144" y="141">Gemini + n8n</text><text class="sub" x="144" y="158">Category, sentiment, urgency</text>
+              <rect class="node" x="90" y="222" width="240" height="56" rx="12"/>
+              <rect class="ico" x="106" y="238" width="24" height="24" rx="6"/>
+              <text x="144" y="246">Reply or alert</text><text class="sub" x="144" y="263">FAQ draft, Gmail, human review</text>
+            </svg>
+          </div>
+        </div>
+        <div class="body">
+          <h3>AI Customer Support Assistant</h3>
+          <p>An n8n workflow that reads each customer message, works out what it is about and how urgent it is, and drafts a reply from an FAQ.</p>
+          <ul class="did">
+            <li>Gemini sorts every message by category, sentiment, urgency and confidence, and replies are drafted from the FAQ with RAG.</li>
+            <li>Urgent messages trigger a Gmail alert, and low-confidence ones are flagged for a person to review.</li>
+            <li>Tested the urgency prompt on 25 messages I wrote myself across 3 versions, reaching 25/25 on the final one, with retries and a separate error-alert workflow.</li>
+          </ul>
+          <ul class="tags"><li>n8n</li><li>Gemini API</li><li>Google Sheets</li><li>Gmail</li></ul>
+          <div class="links"><a href="https://github.com/Ayesha-rubab-08/ai-support-assistant">View the code on GitHub</a></div>
+        </div>
+      </article>
+
+      <article class="card proj flip">
         <div class="media">
           <div class="browser">
             <div class="bar"><i></i><i></i><i></i><span>smart-dine-ai.vercel.app</span></div>
@@ -258,7 +289,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         </div>
       </article>
 
-      <article class="card proj flip">
+      <article class="card proj">
         <div class="media">
           <div class="flow" role="img" aria-label="Flow: a topic in Google Sheets goes to Gemini, which writes the article, and n8n creates a WordPress draft">
             <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
@@ -289,7 +320,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         </div>
       </article>
 
-      <article class="card proj">
+      <article class="card proj flip">
         <div class="media">
           <div class="browser">
             <div class="bar"><i></i><i></i><i></i><span>Designmodo clone</span></div>
